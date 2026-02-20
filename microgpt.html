@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+	<meta charset="UTF-8">
+	<title>microgpt.php</title>
+	<script>
+	function microgpt_run(btn)
+	{
+		var steps = document.getElementById('steps').value || '';
+		document.getElementById('output_php').src = "microgpt.php?debug=1&steps=" + document.getElementById('steps').value
+	}
+	</script>
+</head>
+<body>
+	<p>
+		<input id="steps" type="number" value="" placeholder="steps (default 1000)" style="width:10em">
+		<button id="run_microgpt" onclick="microgpt_run(this)">Run microgpt.php</button>
+	</p>
+	<iframe id="output_php" src="about:blank" frameborder="0" style="width:99%;min-height:300px;border:1px solid silver;"></iframe>
+</body>
+</html>
